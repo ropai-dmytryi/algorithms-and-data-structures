@@ -1,28 +1,26 @@
-package stack;
+package stack.bracket_checker;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class PostfixApp {
+public class BracketsApp {
 
 	public static void main(String[] args) throws IOException {
 		String input;
-		int output;
-		
-		while(true) {
-			System.out.println("Enter postfix: ");
+
+		while (true) {
+			System.out.println("Enter string conteining delimiters");
 			System.out.flush();
 			input = getString();
-			if(input.equals(""))
+			if (input.equals(""))
 				break;
-			
-			ParsePost parsePost = new ParsePost(input);
-			output = parsePost.doParse();
-			System.out.println("Evaluates to " + output);
+
+			BracketChecker bracketChecker = new BracketChecker(input);
+			bracketChecker.check();
 		}
 	}
-	
+
 	private static String getString() throws IOException {
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);

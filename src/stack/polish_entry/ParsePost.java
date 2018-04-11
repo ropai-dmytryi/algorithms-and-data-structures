@@ -1,4 +1,7 @@
-package stack;
+package stack.polish_entry;
+
+import stack.StackXForInteger;
+
 /**
  * Парсинг постфиксного выражения.(Зачем я это делаю?)
  * @author Dima Ropay

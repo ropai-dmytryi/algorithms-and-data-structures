@@ -1,23 +1,28 @@
-package stack;
+package stack.polish_entry;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BracketsApp {
+public class IntfixApp {
 
 	public static void main(String[] args) throws IOException {
-		String input;
+
+		String input, output;
 
 		while (true) {
-			System.out.println("Enter string conteining delimiters");
+			System.out.print("Enter infix: ");
 			System.out.flush();
+
 			input = getString();
 			if (input.equals(""))
 				break;
 
-			BracketChecker bracketChecker = new BracketChecker(input);
-			bracketChecker.check();
+			InToPost inToPost = new InToPost(input);
+			output = inToPost.doTrans();
+
+			System.out.println("Postfix is " + output + "\n");
+
 		}
 	}
 
@@ -27,4 +32,5 @@ public class BracketsApp {
 		String inputString = br.readLine();
 		return inputString;
 	}
+
 }

@@ -1,4 +1,6 @@
-package stack;
+package stack.bracket_checker;
+
+import stack.StackX;
 
 /**
  * Программа для проверки парности скобок.

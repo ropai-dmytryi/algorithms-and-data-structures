@@ -1,4 +1,6 @@
-package stack;
+package stack.polish_entry;
+
+import stack.StackX;
 
 /**
  * Класс для перевода выражения из интфиксной записи в постфиксную.
