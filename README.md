@@ -1,1 +1,11 @@
-# algorithms-and-data-structures
+# Алгоритмы и структуры данных
+
+### Цели:
+
+> Изучение алгоритмов и структур данных
+
+> Решение класических задач программирования
+
+### Использованые материалы:
+
+	[Роберт Лафоре. Структуры данных и алгоритмы в Java, 2-е издание](http://lit-oboz.ru/knigi/operasion/1292-robert-lafore-struktury-dannyh-i-algoritmy-v-java-2-e-izdanie.html)

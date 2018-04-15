@@ -1,7 +1,6 @@
 package genetic_algoritm;
 
-import genetic_algoritm.GeneticEngine.CrossingType;
-import genetic_algoritm.GeneticEngine.SelectionType;
+
 
 public class Main {
 
