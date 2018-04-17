@@ -3,11 +3,11 @@ package sorts;
 public class SortArrays {
 	private static long start;
 	private static long finish;
-	private static long[] arr = new long[10];
+	private static long[] arr = new long[128];
 	public static void main(String[] args) {
 
 		
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 128; i++) {
 			int randomNumber = 0 + (int)(Math.random() * 99);
 			arr[i] = randomNumber;
 		}
@@ -34,6 +34,17 @@ public class SortArrays {
 		
 		System.out.println("Сортировка методом вставки выполнилась за: " + (finish - start) + " мс!");
 		arrayIns.display();
+		System.out.println("\n");
+		
+		MergeSort mergeSort = new MergeSort(arr);
+		
+		start = System.nanoTime();
+		mergeSort.mergeSort();
+		finish = System.nanoTime();
+		
+		System.out.println("Сортировка слияния выполнилась за: " + (finish - start) + " мс!");
+		arrayIns.display();
+		System.out.println("\n");
 	}
 	
 	
