@@ -3,12 +3,12 @@ package sorts;
 public class SortArrays {
 	private static long start;
 	private static long finish;
-	private static long[] arr = new long[128];
+	private static long[] arr = new long[1000];
 	public static void main(String[] args) {
 
 		
-		for(int i = 0; i < 128; i++) {
-			int randomNumber = 0 + (int)(Math.random() * 99);
+		for(int i = 0; i < 1000; i++) {
+			int randomNumber = 0 + (int)(Math.random() * 1000);
 			arr[i] = randomNumber;
 		}
 		
@@ -42,8 +42,18 @@ public class SortArrays {
 		mergeSort.mergeSort();
 		finish = System.nanoTime();
 		
-		System.out.println("Сортировка слияния выполнилась за: " + (finish - start) + " мс!");
+		System.out.println("Сортировка слиянием выполнилась за: " + (finish - start) + " мс!");
 		arrayIns.display();
+		System.out.println("\n");
+		
+		ShellSort shellSort = new ShellSort(arr);
+		
+		start = System.nanoTime();
+		shellSort.shellSort();
+		finish = System.nanoTime();
+		
+		System.out.println("Сортировка Шелла выполнилась за: " + (finish - start) + " мс!");
+		shellSort.display();
 		System.out.println("\n");
 	}
 	
