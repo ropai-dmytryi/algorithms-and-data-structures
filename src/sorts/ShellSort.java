@@ -26,7 +26,6 @@ public class ShellSort {
 	}
 
 	public void display() {
-		System.out.print("A = ");
 		for (int i = 0; i < theArray.length; i++)
 			System.out.print(theArray[i] + " ");
 		System.out.println("");
