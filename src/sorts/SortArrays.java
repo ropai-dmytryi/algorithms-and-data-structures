@@ -75,6 +75,16 @@ public class SortArrays {
 		System.out.println("Быстрая сортировка с определением медианы по трем точкам выполнилась за: " + (finish - start) + " мс!");
 		quickSort2.display();
 		System.out.println("\n");
+		
+		QuickSort3 quickSort3 = new QuickSort3(arr);
+		
+		start = System.nanoTime();
+		quickSort3.quickSort();
+		finish = System.nanoTime();
+		
+		System.out.println("Быстрая сортировка с применением сортировки методом вставки выполнилась за: " + (finish - start) + " мс!");
+		quickSort3.display();
+		System.out.println("\n");
 	}
 	
 	
